@@ -1,0 +1,54 @@
+format = """
+$username\
+$hostname\
+$localip\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$fill\
+$package\
+$java\
+$kotlin\
+$gradle\
+$terraform\
+$azure\
+$gcloud\
+$lua\
+$python\
+$nodejs\
+$aws\
+$docker_context\
+$kubernetes\
+$battery
+$time\
+$status\
+$os\
+$container\
+$netns\
+$shell
+$jobs\
+$cmd_duration
+$character"""
+
+[fill]
+symbol = '.'
+
+[directory]
+truncation_length = 3
+truncation_symbol = '.../'
+truncate_to_repo = false
+
+[directory.substitutions]
+'Documents' = '󰈙'
+'Downloads' = ' '
+'Music' = ' '
+'Pictures' = ' '
+
+[java]
+format = '[${symbol}(${version} )]($style)'
+
+[package]
+format = '[$symbol$version]($style) '
